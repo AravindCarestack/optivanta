@@ -26,7 +26,7 @@ export function DesktopNavbar(props) {
           {link.name}
         </a>
       ))}
-      <LoginButton url={props?.loginUrl} />
+      {/* <LoginButton url={props?.loginUrl} /> */}
       <CTAButton url={props?.ctaUrl} name={props.ctaName} className="text-sm" />
     </div>
   )
@@ -50,7 +50,7 @@ export function MobileNavBar(props) {
           {link.name}
         </a>
       ))}
-      <LoginButton url={props?.loginUrl} />
+      {/* <LoginButton url={props?.loginUrl} /> */}
       <CTAButton url={props?.ctaUrl} name={props.ctaName} />
     </div>
   )

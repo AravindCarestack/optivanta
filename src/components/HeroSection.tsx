@@ -5,6 +5,7 @@ import { cn } from '~/lib/utils'
 import Image from 'next/image'
 import { PortableText } from '@portabletext/react'
 import HeroFloater from './common/HeroFloater'
+import HeroImage from './common/HeroImage'
 
 const AnimatedShinyTextDemo = (props) => {
   return (
@@ -18,7 +19,6 @@ const AnimatedShinyTextDemo = (props) => {
         <span className="items-center">
           {props.content}
         </span>
-        {/* <ArrowRightIcon className="ml-1 size-3 md:size-4 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" /> */}
       </AnimatedShinyText>
     </div>
   )
@@ -40,41 +40,7 @@ const components: any = {
 
 const HeroContent = ({ className = null, content }) => {
   return (
-    // <div className={cn(className)}>
-    //   <div className="w-full flex flex-col items-center gap-3">
-    //     {/* Title and Subtitle */}
-    //     <AnimatedShinyTextDemo
-    //       className="text-sm font-normal"
-    //       content={content?.strip}
-    //     />
-    //     <div className="flex flex-col items-center">
-    //       <H1 className="text-center text-white font-medium ">
-    //         {content?.header.static}
-    //         <span className="md:text-5xl text-4xl text-ellipsis font-semibold text-[#f768d1] text-center max-w-96 md:max-w-none">
-    //           {' '}
-    //           {content?.header.dynamic[0]}
-    //         </span>
-    //       </H1>
-    //     </div>
-
-    //     {/* Description */}
-    //     <PortableText value={content?.description} components={components} />
-
-    //     {/* Buttons */}
-    //     <div
-    //       className="flex justify-center md:justify-start items-center gap-3 mt-12"
-    //       data-aos="fade-up"
-    //       data-aos-delay="200"
-    //       data-aos-duration="1000"
-    //     >
-    //       <CTAButton
-    //         url={content.cta.url}
-    //         className="px-6 py-3"
-    //         name={content.cta.name}
-    //       />
-    //     </div>
-    //   </div>
-    // </div>
+   
     <div className={cn(className)}>
       <div className="w-full flex flex-col items-center md:items-start gap-3">
         {/* Title and Subtitle */}
@@ -83,7 +49,6 @@ const HeroContent = ({ className = null, content }) => {
           content={content?.strip}
         />
         <H1 className=" text-white flex flex-wrap justify-center md:justify-start gap-2">
-          {console.log(content?.header)}
           {
             content?.header?.dynamic?.map((e:string)=>{
              return( <span className="text-[#FFD400] max-w-96 md:max-w-none flex items-center">
@@ -92,7 +57,6 @@ const HeroContent = ({ className = null, content }) => {
              )
             })
           }
-     
         </H1>
 
         {/* Description */}
@@ -120,10 +84,9 @@ const HeroSection = ({ data }) => {
   return (
     <div className="w-full h-full flex flex-row justify-between items-center">
       {data && (
-        <HeroContent
+        <><HeroContent
           className="flex items-center w-full lg:w-1/2 md:pt-20"
-          content={data}
-        />
+          content={data} /><HeroImage /></>
       )}
       <div className="hidden lg:block absolute top-60 xl:top-36 right-0  2xl:-right-20 items-center ">
         {/* <Image
@@ -134,7 +97,7 @@ const HeroSection = ({ data }) => {
           alt="hero-left"
         /> */}
       </div>
-      <div className="flex w-full absolute  justify-center left-0 -bottom-[44px] md:-bottom-[56px] z-20 px-4">
+      <div className="flex w-full absolute justify-center left-0 -bottom-[44px] md:-bottom-[56px] z-20 px-4">
         <HeroFloater />
       </div>
     </div>

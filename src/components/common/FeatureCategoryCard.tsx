@@ -18,15 +18,15 @@ const FeatureCategoryCard = ({
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          // setOpacity(0)
-          // setTimeout(() => {
-          //   setActiveImage(image)
-          //   setOpacity(100)
-          // }, 300)
+          setOpacity(0)
+          setTimeout(() => {
+            setActiveImage(image)
+            setOpacity(100)
+          }, 100)
           setActiveImage(image)
         }
       },
-      { root: null, threshold: 0.7 }, // Trigger when 10% of the next section is visible
+      { root: null, threshold: 0.7 },
     )
 
     if (contentRef) {
@@ -53,7 +53,7 @@ const FeatureCategoryCard = ({
         </div>
         <div className="flex justify-center md:justify-start pt-10 md:pt-0">
           <CTAButton
-            className="w-44 px-6 py-3"
+            className="w-32 !text-white !bg-black px-6 py-3"
             name={cta.name ?? ''}
             url={cta.url ?? '/'}
           />

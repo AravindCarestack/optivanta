@@ -87,7 +87,7 @@ module.exports = {
           'linear-gradient(46deg, #8639F8 16.25%, #8F3CF4 27%, #A947EB 46.55%, #D359DD 70%, #F768D1 87.59%)',
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'testimonial-gradient': 'linear-gradient(260deg, #8C88FF 4.95%, #1911B3 167.68%)',
-        'black-gradient':'linear-gradient(176deg, #3B3B3B -32.99%, #242424 14.13%, #000 88.3%);'
+        'black-gradient':'linear-gradient(176deg, #3B3B3B -32.99%, #242424 14.13%, #000 88.3%)'
       },
     },
   },

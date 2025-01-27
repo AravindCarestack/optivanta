@@ -7,6 +7,7 @@ import { isEmpty } from 'lodash'
 const FeatureSection = ({ data }) => {
   if (isEmpty(data)) return <></>
   const { strip, header, featuresByCategory, cta } = data
+  console.log(featuresByCategory)
   return (
     <>
       <div className="flex flex-col w-full items-center gap-2 pb-12 md:pb-0">
@@ -15,8 +16,9 @@ const FeatureSection = ({ data }) => {
           <H2>{header ?? ''}</H2>
           <p className="flex justify-center">
             <span className="text-center text-base md:text-lg font-normal text-gray-700">
-              Simplify and optimize your dental group with a unified enterprise
-              business management system.
+            Simplify and optimize your dental group with a unified enterprise
+            <br></br>
+             business management system.
             </span>
           </p>
         </div>

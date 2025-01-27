@@ -109,9 +109,9 @@ const Content = (props: any) => {
         </Container>
       </Section>
       <Section id="integrations-section" className="py-16 md:py-24">
-        <Container className="flex flex-col items-center gap-16">
+        {/* <Container className="flex flex-col items-center gap-16">
           <IntegrationSection data={integrationsSectionData} />
-        </Container>
+        </Container> */}
       </Section>
       <Section id="benefits-section" className="py-16 md:py-24 bg-gray-50">
         <Container className="flex flex-col items-center gap-16">
@@ -127,11 +127,7 @@ const Content = (props: any) => {
          }
         </Container>
       </Section>
-      {/* <CustomerSection data={customerSectionData} /> */}
       <Section id="comparison-section" className="py-16 md:py-24 bg-gray-50">
-        {/* <Container className="flex flex-col items-center gap-16">
-          { comparisonSectionData && <ComparisonSection data={comparisonSectionData} />}
-        </Container> */}
       </Section>
       <Section
         id="about-us-section"

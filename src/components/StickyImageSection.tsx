@@ -19,7 +19,7 @@ const StickyImageSection = ({ data }) => {
             <ImageLoader
               image={activeImage}
               className={cn(
-                'flex justify-center items-center rounded-2xl overflow-hidden transition-opacity duration-300 ease-in-out', `opacity-${opacity}`
+                'flex justify-center h-[400px] items-center rounded-2xl overflow-hidden transition-opacity duration-300 ease-in-out', `opacity-${opacity}`
               )}
               fixed={false}
             />
