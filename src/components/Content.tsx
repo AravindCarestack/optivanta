@@ -5,6 +5,8 @@ import TestimonialSection from './TestimonialSection'
 import AboutUsSection from './AboutUsSection'
 import Section from './structure/Section'
 import Container from './structure/Container'
+import { cn } from '~/lib/utils'
+import GridPattern from './ui/grid-pattern'
 
 const Content = (props: any) => {
   const {
@@ -87,6 +89,17 @@ const Content = (props: any) => {
         id="hero-section"
         className="hero-section bg-hero-gradient bg-cover"
       >
+         <GridPattern
+          width={40}
+          height={40}
+          x={2}
+          y={2}
+          stroke="currentColor"
+          className={cn(
+       
+            '[mask-image:linear-gradient(to_top_left,yellow,transparent,transparent)]',
+          )}
+        />
         <Container className="relative pt-20 pb-24 md:pb-44 ">
           <HeroSection data={heroSectionData} />
         </Container>
@@ -114,9 +127,10 @@ const Content = (props: any) => {
       </Section>
       <Section
         id="membership-section"
-        className="py-16 md:py-24 bg-yellow-gradient "
+        className="py-16 md:py-24 bg-[#ffc72c] bg-grid-pattern bg-blend-color-burn bg-cover"
       >
-        <Container className="flex flex-col items-center gap-16 bg-grid-pattern">
+        
+        <Container className="flex flex-col items-center gap-16">
           {membershipData && <TestimonialSection data={membershipData} />}
         </Container>
       </Section>

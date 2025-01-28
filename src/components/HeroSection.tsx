@@ -91,8 +91,7 @@ const HeroSection = ({ data }) => {
           <HeroImage />
         </>
       )}
-      <div className="hidden lg:block absolute top-60 xl:top-36 right-0  2xl:-right-20 items-center ">
-      </div>
+      <div className="hidden lg:block absolute top-60 xl:top-36 right-0  2xl:-right-20 items-center "></div>
       <div className="flex w-full absolute justify-center left-0 -bottom-[44px] md:-bottom-[56px] z-20 px-4">
         <HeroFloater />
       </div>
@@ -101,6 +100,3 @@ const HeroSection = ({ data }) => {
 }
 
 export default HeroSection
-
-{
-}
