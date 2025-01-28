@@ -27,19 +27,19 @@ const BottomSection = () => {
       <div className="flex flex-col md:flex-row gap-4 md:gap-8 text-center">
         <Link
           className=" text-white/50 hover:text-white/90"
-          href={'/legal/terms-and-conditions'}
+          href={'/'}
         >
           Terms of use
         </Link>
         <Link
           className=" text-white/50 hover:text-white/90"
-          href={'legal/privacy-policy'}
+          href={'/'}
         >
           Privacy policy
         </Link>
         <Link
           className=" text-white/50 hover:text-white/90"
-          href={'legal/business-agreement'}
+          href={'/'}
         >
           Contact Us
         </Link>
