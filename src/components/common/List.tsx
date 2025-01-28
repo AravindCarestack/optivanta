@@ -34,7 +34,7 @@ const List = (props) => {
           <div className="flex flex-row items-start gap-[6px]">
             <Image
               className="mt-[3.75px] w-5 h-5"
-              src="/good-tick.svg"
+              src="/Tick.svg"
               width={14}
               height={14}
               alt="points"
