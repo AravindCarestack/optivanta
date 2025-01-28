@@ -5,42 +5,26 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'authorname',
-      title: 'Author Name',
+      name: 'membershipHeading',
+      title: 'Membership Heading',
       type: 'string',
-    }),
-    defineField({
-      name: 'authordesignation',
-      title: 'Designation',
-      type: 'string',
-    }),
-    defineField({
-      name: 'testimonialheading',
-      title: 'Testimonial Heading',
-      type: 'string',
-    }),
-    defineField({
-      name: 'testimonialDescription',
-      title: 'Testimonial Description',
-      type: 'text',
     }),
 
     defineField({
-      name: 'authorimage',
-      title: 'Author Image',
+      name: 'membershipDescription',
+      title: 'Membership Points',
+      type: 'blockContent',
+    }),
+
+    defineField({
+      name: 'membershipIcon',
+      title: 'Membership Icon',
       type: 'image',
     }),
-
     defineField({
-      name: 'location',
-      title: 'location',
-      type: 'string',
-      
-    }),
-    defineField({
-      name: 'numberOflocation',
-      title: 'Number of location',
-      type: 'number',
+      name: 'isFutureFeature',
+      title: 'Is Future Feature',
+      type: 'boolean',
     }),
     defineField({
       name: 'language',
@@ -48,5 +32,6 @@ export default defineType({
       readOnly: true,
       hidden: true,
     }),
+
   ],
 })

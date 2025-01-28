@@ -39,6 +39,11 @@ export default defineType({
       type: 'image',
     }),
     defineField({
+      name: 'aboutDescription',
+      title: 'About Section Description',
+      type: 'text',
+    }),
+    defineField({
       name: 'featureHeader',
       title: 'Feature Section Header',
       type: 'string',
@@ -63,7 +68,7 @@ export default defineType({
 
     defineField({
       name: 'selectedfeatures',
-      title: 'Selected Feature',
+      title: 'Selected Services',
       type: 'array',
       of: [
         {
@@ -111,7 +116,7 @@ export default defineType({
 
     defineField({
       name: 'selectedTestimonial',
-      title: 'Selected Testimonial',
+      title: 'Membership Benefits',
       type: 'array',
       of: [
         {

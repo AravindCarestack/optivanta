@@ -2,16 +2,10 @@ import HeroSection from './HeroSection'
 import BenefitsSection from './BenefitsSection'
 import FeatureSection from './FeatureSection'
 import TestimonialSection from './TestimonialSection'
-import IntegrationSection from './IntegrationSection'
 import AboutUsSection from './AboutUsSection'
-import ComparisonSection from './ComparisonSection'
-import CustomerSection from './CustomerSection'
 import Section from './structure/Section'
 import Container from './structure/Container'
 
-/*
-  Idea is to use adaptors to connect sanity data and UI components.
-*/
 const Content = (props: any) => {
   const {
     homeSettings,
@@ -19,7 +13,8 @@ const Content = (props: any) => {
     founderDetails,
     comparisonTableData,
     allPMS,
-    comparisonLegend
+    comparisonLegend,
+    memberShip,
   } = props
 
   if (!homeSettings && !siteSettings) return <></>
@@ -40,7 +35,7 @@ const Content = (props: any) => {
   }
 
   const featureSectionData = {
-    strip: 'FEATURES',
+    strip: 'Services',
     header: homeSettings.featureHeader,
     featuresByCategory: homeSettings.selectedFeatures,
     cta,
@@ -58,26 +53,22 @@ const Content = (props: any) => {
     strip: 'BENEFITS',
     header: homeSettings.benefitHeader,
     benefits: homeSettings.selectedBenefits,
-    cta,
+    cta: 'Become A Member',
   }
 
-  const testimonialSectionData = {
-    strip: 'testimonials',
+  const membershipData = {
+    strip: 'MEMBERSHIP',
     header: homeSettings.testimonialHeader,
     testimonials: homeSettings.selectedTestimonials,
     customers: homeSettings.selectedPartners,
     cta,
-  }
-
-  const customerSectionData = {
-    strip: 'Trusted by multi-location DSOs across the US',
-    customers: homeSettings.selectedPartners,
+    memberShip,
   }
 
   const aboutSectionData = {
     heading: 'About Us',
-    description: siteSettings.ogDescription,
-    image: '/about-us.png',
+    description: homeSettings.aboutDescription,
+    image: homeSettings?.aboutSectionImageUrl,
     founders: founderDetails,
   }
 
@@ -113,25 +104,25 @@ const Content = (props: any) => {
           <IntegrationSection data={integrationsSectionData} />
         </Container> */}
       </Section>
-      <Section id="benefits-section" className="py-16 md:py-24 bg-gray-50">
+      <Section
+        id="benefits-section"
+        className="py-16 md:py-24 bg-black-gradient"
+      >
         <Container className="flex flex-col items-center gap-16">
-          {
-           benefitSectionData && <BenefitsSection data={benefitSectionData} />
-          }
+          {benefitSectionData && <BenefitsSection data={benefitSectionData} />}
         </Container>
       </Section>
-      <Section id="testimonials-section" className="py-16 md:py-24">
-        <Container className="flex flex-col items-center gap-16 ">
-         {
-          testimonialSectionData &&  <TestimonialSection data={testimonialSectionData} />
-         }
+      <Section
+        id="testimonials-section"
+        className="py-16 md:py-24 bg-yellow-gradient "
+      >
+        <Container className="flex flex-col items-center gap-16 bg-grid-pattern">
+          {membershipData && <TestimonialSection data={membershipData} />}
         </Container>
-      </Section>
-      <Section id="comparison-section" className="py-16 md:py-24 bg-gray-50">
       </Section>
       <Section
         id="about-us-section"
-        className="py-16 md:py-24 bg-[#8639f8] bg-grid-pattern bg-contain bg-no-repeat bg-right"
+        className="py-16 md:py-24 bg-contain bg-no-repeat bg-right"
       >
         <Container className="flex flex-col items-center gap-10 w-full ">
           {aboutSectionData && <AboutUsSection data={aboutSectionData} />}

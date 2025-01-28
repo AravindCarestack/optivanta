@@ -2,7 +2,7 @@ import { defineField, defineType } from 'sanity'
 
 export default defineType({
   name: 'featureCategory',
-  title: 'Feature Category',
+  title: 'Service Categories',
   type: 'document',
   fields: [
     defineField({
@@ -22,7 +22,7 @@ export default defineType({
       title: 'Features',
       type: 'array',
       validation: (Rule) => Rule.unique(),
-
+      
       of: [
         {
           type: 'reference',

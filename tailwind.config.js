@@ -81,12 +81,12 @@ module.exports = {
       backgroundImage: {
         'noise-pattern': "url('/bgNoise.png')",
         'hero-pattern': "url('/hero-background.webp')",
-        'grid-pattern': "url('/about-us.webp')",
+        'grid-pattern': "url('/vector.png')",
         'hero-gradient':"linear-gradient(176deg, #3B3B3B -32.99%, #242424 14.13%, #000 88.3%), linear-gradient(176deg, #00849C -32.99%, #003A44 19.73%, #000 83.54%)",
         'hero-cta-gradient':
           'linear-gradient(46deg, #8639F8 16.25%, #8F3CF4 27%, #A947EB 46.55%, #D359DD 70%, #F768D1 87.59%)',
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'testimonial-gradient': 'linear-gradient(260deg, #8C88FF 4.95%, #1911B3 167.68%)',
+        'yellow-gradient': 'linear-gradient(165.49deg, #FFC72C 0%, #FFAA00 79.43%)',
         'black-gradient':'linear-gradient(176deg, #3B3B3B -32.99%, #242424 14.13%, #000 88.3%)'
       },
     },

@@ -7,7 +7,9 @@ import {
   getALLSiteSettings,
   getComparisonTableData,
   getFounderDetails,
-  getAllComparisonValues
+  getAllComparisonValues,
+  fetchMembership,
+  memberShipQuery
 } from '~/lib/sanity.queries'
 import type { SharedPageProps } from '~/pages/_app'
 import Layout from '../components/Layout'
@@ -24,6 +26,8 @@ export const getStaticProps: GetStaticProps<SharedPageProps> = async ({
   const comparisonTableData = await runQuery(getComparisonTableData())
   const allPMS = await runQuery(getAllPMS())
   const comparisonLegend = await runQuery(getAllComparisonValues())
+  const memberShip = await runQuery(memberShipQuery)
+  
   return {
     props: {
       homeSettings,
@@ -34,13 +38,16 @@ export const getStaticProps: GetStaticProps<SharedPageProps> = async ({
       draftMode,
       comparisonLegend,
       token: draftMode ? readToken : '',
+      memberShip
     },
   }
+  
 }
 
 export default function IndexPage(
   props: InferGetStaticPropsType<typeof getStaticProps>,
 ) {
+  console.log(props)
   return (
     <div>
       <BookDemoContextProvider>

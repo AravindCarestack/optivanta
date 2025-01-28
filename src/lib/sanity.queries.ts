@@ -79,7 +79,7 @@ export const featureSectionQuery = groq`
       "features": features[]->
     }
   `
-export const testimonialQuery = groq`*[_type == "testimonial"]{...,"AuthorImage":authorimage.asset->url}`
+export const memberShipQuery = groq`*[_type == "testimonial"]{...,"icon":membershipIcon.asset->url}`
 export const heroSectionQuery_ = groq`
   *[_type == "siteSettings"][0]{
     homeSettings[0],
@@ -232,8 +232,8 @@ export async function featureSection(client: SanityClient): Promise<any> {
   return await client.fetch(featureSectionQuery)
 }
 
-export async function fetchTestimonial(client: SanityClient): Promise<any> {
-  return await client.fetch(testimonialQuery)
+export async function fetchMembership(client: SanityClient): Promise<any> {
+  return await client.fetch(memberShipQuery)
 }
 
 export async function heroSectionQuery(
@@ -305,6 +305,18 @@ export const getALLHomeSettings = () => groq`*[_type == "homeSettings"]{
       _createdAt,
       _id
     },
+
+  "aboutSectionImageUrl": aboutSectionImage.asset->{
+        _id,
+        url,
+        metadata {
+          dimensions {
+            width,
+            height,
+            aspectRatio
+          }
+        }
+      },
   "selectedFeatures": selectedfeatures[]->{
       ...,
       "categoryImage": categoryImage.asset->{

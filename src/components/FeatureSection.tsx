@@ -7,7 +7,7 @@ import { isEmpty } from 'lodash'
 const FeatureSection = ({ data }) => {
   if (isEmpty(data)) return <></>
   const { strip, header, featuresByCategory, cta } = data
-  console.log(featuresByCategory)
+
   return (
     <>
       <div className="flex flex-col w-full items-center gap-2 pb-12 md:pb-0">

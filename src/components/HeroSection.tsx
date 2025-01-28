@@ -16,9 +16,7 @@ const AnimatedShinyTextDemo = (props) => {
       )}
     >
       <AnimatedShinyText className=" px-5 py-2 text-white transition ease-out  ">
-        <span className="items-center">
-          {props.content}
-        </span>
+        <span className="items-center">{props.content}</span>
       </AnimatedShinyText>
     </div>
   )
@@ -40,7 +38,6 @@ const components: any = {
 
 const HeroContent = ({ className = null, content }) => {
   return (
-   
     <div className={cn(className)}>
       <div className="w-full flex flex-col items-center md:items-start gap-3">
         {/* Title and Subtitle */}
@@ -49,14 +46,16 @@ const HeroContent = ({ className = null, content }) => {
           content={content?.strip}
         />
         <H1 className=" text-white flex flex-wrap justify-center md:justify-start gap-2">
-          {
-            content?.header?.dynamic?.map((e:string)=>{
-             return( <span className="text-[#FFD400] max-w-96 md:max-w-none flex items-center">
-              {e}
-            </span>
-             )
-            })
-          }
+          {content?.header?.dynamic?.map((e: string, i: number) => {
+            return (
+              <span
+                key={i}
+                className="text-[#FFD400] max-w-96 md:max-w-none flex items-center"
+              >
+                {e}
+              </span>
+            )
+          })}
         </H1>
 
         {/* Description */}
@@ -71,7 +70,7 @@ const HeroContent = ({ className = null, content }) => {
         >
           <CTAButton
             url={content.cta.url}
-            className="px-6 py-3  !border-0"
+            className="px-6 py-3  !border-0 text-black bg-yellow-gradient"
             name={content.cta.name}
           />
         </div>
@@ -84,18 +83,15 @@ const HeroSection = ({ data }) => {
   return (
     <div className="w-full h-full flex flex-row justify-between items-center">
       {data && (
-        <><HeroContent
-          className="flex items-center w-full lg:w-1/2 md:pt-20"
-          content={data} /><HeroImage /></>
+        <>
+          <HeroContent
+            className="flex items-center w-full lg:w-1/2 md:pt-20"
+            content={data}
+          />
+          <HeroImage />
+        </>
       )}
       <div className="hidden lg:block absolute top-60 xl:top-36 right-0  2xl:-right-20 items-center ">
-        {/* <Image
-          className="w-[560px] h-[350px] xl:w-[640px] xl:h-[400px] 2xl:w-[720px] 2xl:h-[450px]"
-          width={720}
-          height={450}
-          src={'/hero-creative.png'}
-          alt="hero-left"
-        /> */}
       </div>
       <div className="flex w-full absolute justify-center left-0 -bottom-[44px] md:-bottom-[56px] z-20 px-4">
         <HeroFloater />
@@ -107,35 +103,4 @@ const HeroSection = ({ data }) => {
 export default HeroSection
 
 {
-  /* {data && (
-          <HeroContent
-            className="absolute lg:top-56 left-0 w-full h-full lg:h-auto bg-transparent flex justify-center items-center z-20 px-4"
-            content={data}
-          />
-        )} */
-}
-
-{
-  /* {windowWidth > 1280 && (
-          <div className={`absolute bottom-0 left-[-50px]  z-15`}>
-            <Image
-              width={550}
-              height={579.939}
-              src={'/hero-left.svg'}
-              alt="hero-left"
-            />
-          </div>
-        )} */
-}
-{
-  /* {windowWidth > 1280 && (
-          <div className={`absolute bottom-5 right-[-50px] z-15`}>
-            <Image
-              width={500}
-              height={579.939}
-              src={'/hero-right.svg'}
-              alt="hero-left"
-            />
-          </div>
-        )} */
 }

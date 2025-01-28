@@ -27,7 +27,7 @@ export function DesktopNavbar(props) {
         </a>
       ))}
       {/* <LoginButton url={props?.loginUrl} /> */}
-      <CTAButton url={props?.ctaUrl} name={props.ctaName} className="text-sm" />
+      <CTAButton url={props?.ctaUrl} name={props.ctaName} className="text-sm text-black bg-yellow-gradient" />
     </div>
   )
 }
