@@ -92,7 +92,7 @@ const Content = (props: any) => {
         </Container>
       </Section>
       <Section
-        id="features-section"
+        id="service-section"
         className="features-section pb-16 pt-24 md:pt-48 md:pb-24 z-10 !bg-gray-50"
       >
         <Container className="flex flex-col">
@@ -113,7 +113,7 @@ const Content = (props: any) => {
         </Container>
       </Section>
       <Section
-        id="testimonials-section"
+        id="membership-section"
         className="py-16 md:py-24 bg-yellow-gradient "
       >
         <Container className="flex flex-col items-center gap-16 bg-grid-pattern">

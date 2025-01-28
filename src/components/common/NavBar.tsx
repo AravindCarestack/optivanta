@@ -5,11 +5,9 @@ import { NavigationContext } from '~/providers/NavigationContextProvider'
 
 const navigationLinks = [
   // { href: '#hero-section', name: 'Home' },
-  { href: '#features-section', name: 'Features' },
-  { href: '#integrations-section', name: 'Integrations' },
+  { href: '#service-section', name: 'Services' },
   { href: '#benefits-section', name: 'Benefits' },
-  { href: '#testimonials-section', name: 'Testimonials' },
-  { href: '#comparison-section', name: 'Comparison' },
+  { href: '#membership-section', name: 'Membership' },
   { href: '#about-us-section', name: 'About Us' },
   // { href: '#footer', name: 'Contact' },
 ]

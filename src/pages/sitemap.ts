@@ -6,11 +6,11 @@ const SITE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://osdental.io"
 export async function getStaticProps() {
   const staticPaths = [
     '',
-    '#testimonials-section',
+    '#membership-section',
     '#about-us-section',
     '#benefits-section',
     '#integrations-section',
-    '#features-section',
+    '#service-section',
   ]
 
   const url = SITE_URL 
