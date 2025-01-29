@@ -34,7 +34,7 @@ const FeatureCategoryCard = ({
     }
 
     return () => observer.disconnect()
-  }, [setActiveImage])
+  }, [setActiveImage,setOpacity,image])
   return (
     <div ref={contentRef} className="flex md:h-[64vh] w-full items-center">
       <div className="hidden md:block md:w-1/2 "></div>
