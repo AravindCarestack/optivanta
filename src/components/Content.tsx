@@ -112,11 +112,6 @@ const Content = (props: any) => {
           <FeatureSection data={featureSectionData} />
         </Container>
       </Section>
-      <Section id="integrations-section" className="py-16 md:py-24">
-        {/* <Container className="flex flex-col items-center gap-16">
-          <IntegrationSection data={integrationsSectionData} />
-        </Container> */}
-      </Section>
       <Section
         id="benefits-section"
         className="py-16 md:py-24 bg-black-gradient"
