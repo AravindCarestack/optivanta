@@ -45,15 +45,27 @@ const HeroContent = ({ className = null, content }) => {
           className="text-[10px] md:text-sm font-normal text-center"
           content={content?.strip}
         />
-        <H1 className=" text-white flex flex-wrap justify-center md:justify-start gap-2">
-          {content?.header?.dynamic?.map((e: string, i: number) => {
+        <H1 className="text-white flex flex-wrap justify-center md:justify-start gap-2">
+          {content?.header?.dynamic?.map((e: string, outerIndex: number) => {
             return (
-              <span
-                key={i}
-                className="text-[#FFD400] max-w-96 md:max-w-none flex items-center"
-              >
-                {e}
-              </span>
+              <div key={outerIndex} className="w-full flex flex-wrap">
+                {e.split(' ').map((ele, innerIndex) => {
+                  return (
+                    <span
+                      key={`${outerIndex}-${innerIndex}`}
+                      className={
+                        innerIndex === 0
+                          ? 'text-white max-w-96 md:max-w-none flex items-center'
+                          : 'text-[#FFD400] max-w-96 md:max-w-none flex items-center'
+                      }
+                    >
+                      {ele}
+                      {'\u00A0'}
+                    </span>
+                  )
+                })}
+                <br />
+              </div>
             )
           })}
         </H1>
@@ -81,7 +93,7 @@ const HeroContent = ({ className = null, content }) => {
 
 const HeroSection = ({ data }) => {
   return (
-    <div className="w-full h-full flex flex-row items-center">
+    <div className="w-full h-full flex flex-row justify-between items-center">
       {data && (
         <>
           <HeroContent

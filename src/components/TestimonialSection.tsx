@@ -29,20 +29,6 @@ const TestimonialSection = ({ data }) => {
           enterprise business management system.
         </p>
       </div>
-      <div className="w-full flex flex-wrap max-w-5xl  justify-center gap-x-6 md:gap-8">
-        {data.customers?.map((customer, index) => {
-          return (
-            <div key={'customer' + index}>
-              <ImageLoader
-                key={index}
-                image={customer.image}
-                fixed={false}
-                imageClassName="!h-20 w-auto "
-              />
-            </div>
-          )
-        })}
-      </div>
       <div className="flex flex-col w-full items-center gap-6">
         <TestimonialCarousel membershipData={data.memberShip} />
       </div>

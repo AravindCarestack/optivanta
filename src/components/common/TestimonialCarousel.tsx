@@ -25,7 +25,7 @@ const components: any = {
   },
   listItem: {
     bullet: ({ children }: { children: React.ReactNode }) => (
-      <li className="text-gray-300 text-lg font-normal leading-7 list-none flex gap-[6px]">
+      <li className="text-gray-300 text-lg pb-4 font-normal leading-7 list-none flex gap-[6px]">
         <Image
           className="mt-[3.75px] w-5 h-5"
           src="/Tick.svg"
@@ -46,7 +46,7 @@ const TestimonialCarousel = ({ membershipData }) => {
     return card?.map((e, i) => {
       return (
         <div
-          className="w-[328px] h-[500px] bg-black-gradient rounded-md"
+          className="w-[328px] h-[550px] bg-black-gradient rounded-xl"
           key={i}
         >
           <div className="h-[126px] w-[328px] underline-offset-2 border-b border-gray-500 p-8 flex-col flex gap-6 pt-4 px-8 pb-8">

@@ -22,11 +22,11 @@ const FeatureCategoryCard = ({
           setTimeout(() => {
             setActiveImage(image)
             setOpacity(100)
-          }, 100)
+          }, 200)
           setActiveImage(image)
         }
       },
-      { root: null, threshold: 0.7 }, // Trigger when 10% of the next section is visible
+      { root: null, threshold: 0.9 },
     )
 
     if (contentRef) {
@@ -53,7 +53,7 @@ const FeatureCategoryCard = ({
         </div>
         <div className="flex justify-center md:justify-start pt-10 md:pt-0">
           <CTAButton
-            className="w-auto bg-black px-6 py-3"
+            className="w-auto bg-black text-white px-6 py-3"
             name={cta.name ?? ''}
             url={cta.url ?? '/'}
           />

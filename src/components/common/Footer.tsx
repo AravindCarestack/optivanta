@@ -8,7 +8,7 @@ const TopSection = ({ data, ctaName }) => {
   return (
     <div className="self-stretch flex-col justify-start items-start gap-14 flex">
       <div className="w-full gap-8 inline-flex flex-col ">
-        <H2 className="!text-white ">Lower Expenses. Maximize Efficiency</H2>
+        <H2 className="!text-white ">Lower Expenses. Maximize Efficiency.</H2>
         <div className="flex justify-center">
           <CTAButton url={data} className="px-6 py-3 text-black bg-yellow-gradient" name={ctaName} />
         </div>

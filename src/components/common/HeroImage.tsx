@@ -3,7 +3,7 @@ import React from 'react'
 
 const HeroImage = () => {
   return (
-  <div className=" flex-col justify-center items-center flex relative hidden lg:block top-[170px] ">
+  <div className=" flex-col justify-center items-center flex relative hidden lg:block top-[133px] ">
     <img className=" w-full h-[500px] object-cover object-center" src="/heroImage.png"/>
   </div>
   )

@@ -6,15 +6,15 @@ import Image from 'next/image'
 
 const AboutUsSection = ({ data }) => {
   return (
-    <div className="max-w-7xl">
-      <H2 className=" text-gray-900  !text-left pb-3">{data.heading}</H2>
-      <div className="flex flex-row md:gap-16">
+    <div className="max-w-7xl flex flex-row md:gap-16">
+      <div>
+        <H2 className=" text-gray-900  !text-left pb-3">{data.heading}</H2>
         <Paragraph className="text-gray-900 text-base md:text-lg ">
           {data.description}
         </Paragraph>
-        <div className="hidden md:block">
-          <Image src={data?.image.url} alt={''} width={620} height={350} />
-        </div>
+      </div>
+      <div className="hidden md:block">
+        <Image src={data?.image.url} alt={''} width={620} height={350} />
       </div>
     </div>
   )
