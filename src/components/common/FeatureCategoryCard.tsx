@@ -40,7 +40,9 @@ const FeatureCategoryCard = ({
       <div className="hidden md:block md:w-1/2 "></div>
       <div className="w-full  md:w-1/2 flex flex-col gap-8 md:pl-8 ">
         <div className="flex flex-col gap-12 ">
-          <div className="md:hidden h-[250px] w-full md:w-[350px]  rounded-2xl  overflow-hidden">
+          <div className="md:hidden h-[250px] w-full md:w-[350px]  rounded-2xl  overflow-hidden"
+          style={{background: 'linear-gradient(180deg, #FFFFFF -27.83%, #FFD053 36.45%, #B98700 81.38%)'}}
+          >
             <ImageLoader image={image} />
           </div>
           <div className="flex flex-col gap-6">

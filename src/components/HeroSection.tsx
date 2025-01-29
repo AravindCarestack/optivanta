@@ -24,7 +24,7 @@ const AnimatedShinyTextDemo = (props) => {
 const components: any = {
   block: {
     normal: ({ children }: { children: React.ReactNode }) => (
-      <p className="text-white/80 text-base md:text-xl font-normal text-center md:text-start md:pr-8 ">
+      <p className="text-white/80  md:text-xl font-normal text-lg text-center md:text-start md:pr-8 ">
         {children}
       </p>
     ),

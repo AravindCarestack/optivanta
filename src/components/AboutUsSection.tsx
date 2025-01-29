@@ -7,7 +7,7 @@ import Image from 'next/image'
 const AboutUsSection = ({ data }) => {
   return (
     <div className="max-w-7xl flex flex-row md:gap-16">
-      <div>
+      <div className="flex align-baseline justify-center flex-col">
         <H2 className=" text-gray-900  !text-left pb-3">{data.heading}</H2>
         <Paragraph className="text-gray-900 text-base md:text-lg ">
           {data.description}
