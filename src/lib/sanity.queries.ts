@@ -336,7 +336,7 @@ export const getALLHomeSettings = () => groq`*[_type == "homeSettings"]{
     },
   "selectedTestimonials": selectedTestimonial[]->{
       ...,
-      "AuthorImage": authorimage.asset->url
+      "icon": membershipIcon.asset->url
     },
   "selectedPartners": selectedPartner[]->{
       partnerName,
@@ -367,7 +367,7 @@ export const getALLHomeSettings = () => groq`*[_type == "homeSettings"]{
       },
       "benefitPoints": benefitPoints
     }
-} | order(_createdAt desc)[0]`
+}[0]`
 
 export const getALLSiteSettings = () =>
   groq`*[_type == "siteSettings"] | order(_createdAt desc)[0]`

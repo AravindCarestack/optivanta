@@ -64,7 +64,7 @@ const Content = (props: any) => {
     testimonials: homeSettings.selectedTestimonials,
     customers: homeSettings.selectedPartners,
     cta,
-    memberShip,
+    memberShip:homeSettings.selectedTestimonials
   }
 
   const aboutSectionData = {

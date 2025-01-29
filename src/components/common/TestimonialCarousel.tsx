@@ -1,4 +1,4 @@
-import React, { ReactElement, useMemo } from 'react'
+import React, {useMemo } from 'react'
 import Image from 'next/image'
 import { PortableText } from '@portabletext/react'
 
@@ -54,7 +54,7 @@ const TestimonialCarousel = ({ membershipData }) => {
               <div className="border-yellow-500 w-6 h-6">
                 <Image src={e?.icon} alt={''} width={50} height={50} />
               </div>
-              <p className="text-yellow-600 text-base text-sm ">
+              <p className="text-yellow-600 text-base">
                 {!e?.isFutureFeature ? 'Coming Soon*' : ''}
               </p>
             </div>

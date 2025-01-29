@@ -1,28 +1,24 @@
 import React from 'react'
 import TestimonialCarousel from './common/TestimonialCarousel'
-import Section from './structure/Section'
-import Container from './structure/Container'
 import H2 from './typography/H2'
 import Subtext from './typography/Subtext'
 import CTAButton from './common/CTAbutton'
-import CustomerCard from './common/CustomerCard'
 import ImageLoader from './common/imageLoader/imageLoader'
 import { cn } from '~/lib/utils'
 import GridPattern from './ui/grid-pattern'
 
 const TestimonialSection = ({ data }) => {
-
   return (
     <>
-            <GridPattern
-              width={40}
-              height={40}
-              x={-1}
-              y={-1}
-              className={cn(
-                '[mask-image:linear-gradient(to_top_left,transparent,transparent,transparent)]',
-              )}
-            />
+      <GridPattern
+        width={40}
+        height={40}
+        x={-1}
+        y={-1}
+        className={cn(
+          '[mask-image:linear-gradient(to_top_left,transparent,transparent,transparent)]',
+        )}
+      />
       <div className="flex flex-col w-full items-center gap-2">
         <Subtext className="text-black">{data.strip}</Subtext>
         <div className="max-w-2xl w-full flex justify-center">
@@ -44,7 +40,7 @@ const TestimonialSection = ({ data }) => {
         })}
       </div>
       <div className="flex flex-col w-full items-center gap-6">
-        <TestimonialCarousel membershipData={data.memberShip}/>
+        <TestimonialCarousel membershipData={data.memberShip} />
       </div>
       <CTAButton
         url={data.cta.url ?? '/'}
