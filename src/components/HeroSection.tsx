@@ -81,7 +81,7 @@ const HeroContent = ({ className = null, content }) => {
 
 const HeroSection = ({ data }) => {
   return (
-    <div className="w-full h-full flex flex-row justify-between items-center">
+    <div className="w-full h-full flex flex-row items-center">
       {data && (
         <>
           <HeroContent

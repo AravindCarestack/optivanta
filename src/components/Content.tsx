@@ -106,7 +106,7 @@ const Content = (props: any) => {
       </Section>
       <Section
         id="service-section"
-        className="features-section pb-16 pt-24 md:pt-48 md:pb-24 z-10 !bg-gray-50"
+        className="features-section pb-16 pt-16 md:pt-48 md:pb-24 z-10 !bg-gray-50"
       >
         <Container className="flex flex-col">
           <FeatureSection data={featureSectionData} />

@@ -78,7 +78,7 @@ const TestimonialCarousel = ({ membershipData }) => {
   )
 
   return (
-    <div className="w-full flex-col md:flex-row  rounded-md max-w-7xl px-4 flex items-center gap-16">
+    <div className="w-full lg:flex-row flex-col  rounded-md max-w-7xl px-4 flex items-center gap-16">
       {MembershipCards}
     </div>
   )

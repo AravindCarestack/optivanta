@@ -24,6 +24,10 @@ const TestimonialSection = ({ data }) => {
         <div className="max-w-2xl w-full flex justify-center">
           <H2>{data.header}</H2>
         </div>
+        <p className="text-center text-gray-700 text-lg font-normal pt-2">
+          Streamline and enhance your dental group with a comprehensive<br></br>
+          enterprise business management system.
+        </p>
       </div>
       <div className="w-full flex flex-wrap max-w-5xl  justify-center gap-x-6 md:gap-8">
         {data.customers?.map((customer, index) => {
