@@ -24,7 +24,7 @@ const AnimatedShinyTextDemo = (props) => {
 const components: any = {
   block: {
     normal: ({ children }: { children: React.ReactNode }) => (
-      <p className="text-white/80  md:text-xl font-normal text-lg text-center md:text-start md:pr-8 ">
+      <p className="text-white/80 text-base md:text-xl font-normal text- text-center md:text-start md:pr-8 ">
         {children}
       </p>
     ),
@@ -53,10 +53,18 @@ const HeroContent = ({ className = null, content }) => {
                   return (
                     <span
                       key={`${outerIndex}-${innerIndex}`}
+                      style={{
+                        backgroundImage:
+                          innerIndex !== 0
+                            ? 'linear-gradient(264deg, #FFD400 -7.2%, #FF9D00 103.36%)'
+                            : 'none',
+                        backgroundClip: innerIndex !== 0 ? 'text' : 'unset',
+                        color: innerIndex !== 0 ? 'transparent' : 'inherit',
+                      }}
                       className={
                         innerIndex === 0
                           ? 'text-white max-w-96 md:max-w-none flex items-center'
-                          : 'text-[#FFD400] max-w-96 md:max-w-none flex items-center'
+                          : 'max-w-96 md:max-w-none flex items-center'
                       }
                     >
                       {ele}

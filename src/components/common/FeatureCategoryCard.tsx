@@ -21,8 +21,8 @@ const FeatureCategoryCard = ({
           setOpacity(0)
           setTimeout(() => {
             setActiveImage(image)
-            setOpacity(100)
-          }, 200)
+            setOpacity(10)
+          }, 10)
           setActiveImage(image)
         }
       },
@@ -34,7 +34,7 @@ const FeatureCategoryCard = ({
     }
 
     return () => observer.disconnect()
-  }, [setActiveImage, setOpacity, image])
+  }, [setActiveImage])
   return (
     <div ref={contentRef} className="flex md:h-[64vh] w-full items-center">
       <div className="hidden md:block md:w-1/2 "></div>
