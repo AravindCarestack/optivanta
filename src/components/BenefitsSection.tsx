@@ -8,11 +8,11 @@ const BenefitsSection = ({ data }) => {
   return (
     <>
       <div className="flex text-white flex-col w-full items-center gap-2">
-        <Subtext>{data.strip}</Subtext>
+        <Subtext className="pb-4">{data.strip}</Subtext>
         <div className=" flex-col w-full flex justify-center">
           <H2 className="text-wrap text-white">{data.header}</H2>
-          <div className="md:pt-12 items-center text-center ">
-            <p className="md:px-36 text-lg font-normal text-center">
+          <div className="md:pt-4 items-center text-center ">
+            <p className="md:px-36 text-lg font-normal text-center text-white/80">
               {' '}
               Beyond cost savings, members gain access to a centralized
               technology solution that streamlines operations. This empowers our
