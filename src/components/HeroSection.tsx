@@ -24,7 +24,7 @@ const AnimatedShinyTextDemo = (props) => {
 const components: any = {
   block: {
     normal: ({ children }: { children: React.ReactNode }) => (
-      <p className="text-white/80 text-base md:text-xl font-normal text-center md:text-start md:pr-8 ">
+      <p className="text-white/80 text-base md:text-xl font-normal text- text-center md:text-start md:pr-8 ">
         {children}
       </p>
     ),
@@ -45,15 +45,35 @@ const HeroContent = ({ className = null, content }) => {
           className="text-[10px] md:text-sm font-normal text-center"
           content={content?.strip}
         />
-        <H1 className=" text-white flex flex-wrap justify-center md:justify-start gap-2">
-          {content?.header?.dynamic?.map((e: string, i: number) => {
+        <H1 className="text-white flex flex-wrap justify-center md:justify-start gap-2">
+          {content?.header?.dynamic?.map((e: string, outerIndex: number) => {
             return (
-              <span
-                key={i}
-                className="text-[#FFD400] max-w-96 md:max-w-none flex items-center"
-              >
-                {e}
-              </span>
+              <div key={outerIndex} className="w-full flex flex-wrap">
+                {e.split(' ').map((ele, innerIndex) => {
+                  return (
+                    <span
+                      key={`${outerIndex}-${innerIndex}`}
+                      style={{
+                        backgroundImage:
+                          innerIndex !== 0
+                            ? 'linear-gradient(264deg, #FFD400 -7.2%, #FF9D00 103.36%)'
+                            : 'none',
+                        backgroundClip: innerIndex !== 0 ? 'text' : 'unset',
+                        color: innerIndex !== 0 ? 'transparent' : 'inherit',
+                      }}
+                      className={
+                        innerIndex === 0
+                          ? 'text-white max-w-96 md:max-w-none flex items-center'
+                          : 'max-w-96 md:max-w-none flex items-center'
+                      }
+                    >
+                      {ele}
+                      {'\u00A0'}
+                    </span>
+                  )
+                })}
+                <br />
+              </div>
             )
           })}
         </H1>
@@ -91,8 +111,7 @@ const HeroSection = ({ data }) => {
           <HeroImage />
         </>
       )}
-      <div className="hidden lg:block absolute top-60 xl:top-36 right-0  2xl:-right-20 items-center ">
-      </div>
+      <div className="hidden lg:block absolute top-60 xl:top-36 right-0  2xl:-right-20 items-center "></div>
       <div className="flex w-full absolute justify-center left-0 -bottom-[44px] md:-bottom-[56px] z-20 px-4">
         <HeroFloater />
       </div>
@@ -101,6 +120,3 @@ const HeroSection = ({ data }) => {
 }
 
 export default HeroSection
-
-{
-}

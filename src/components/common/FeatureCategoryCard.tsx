@@ -21,12 +21,12 @@ const FeatureCategoryCard = ({
           setOpacity(0)
           setTimeout(() => {
             setActiveImage(image)
-            setOpacity(100)
-          }, 100)
+            setOpacity(10)
+          }, 10)
           setActiveImage(image)
         }
       },
-      { root: null, threshold: 0.7 }, // Trigger when 10% of the next section is visible
+      { root: null, threshold: 0.9 },
     )
 
     if (contentRef) {
@@ -34,13 +34,15 @@ const FeatureCategoryCard = ({
     }
 
     return () => observer.disconnect()
-  }, [setActiveImage, setOpacity, image])
+  }, [setActiveImage,setOpacity,image])
   return (
     <div ref={contentRef} className="flex md:h-[64vh] w-full items-center">
       <div className="hidden md:block md:w-1/2 "></div>
       <div className="w-full  md:w-1/2 flex flex-col gap-8 md:pl-8 ">
         <div className="flex flex-col gap-12 ">
-          <div className="md:hidden h-[250px] w-full md:w-[350px]  rounded-2xl  overflow-hidden">
+          <div className="md:hidden h-[250px] w-full md:w-[350px]  rounded-2xl  overflow-hidden"
+          style={{background: 'linear-gradient(180deg, #FFFFFF -27.83%, #FFD053 36.45%, #B98700 81.38%)'}}
+          >
             <ImageLoader image={image} />
           </div>
           <div className="flex flex-col gap-6">
@@ -53,7 +55,7 @@ const FeatureCategoryCard = ({
         </div>
         <div className="flex justify-center md:justify-start pt-10 md:pt-0">
           <CTAButton
-            className="w-auto bg-black px-6 py-3"
+            className="w-auto bg-black text-white px-6 py-3"
             name={cta.name ?? ''}
             url={cta.url ?? '/'}
           />

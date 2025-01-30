@@ -6,7 +6,7 @@ import { cn } from '~/lib/utils'
 
 const components: any = {
   listItem: ({ children }: { children: React.ReactNode }) => (
-    <li className="text-gray-700 text-base md:text-lg font-normal md:max-w-3xl pt-0.5 md:pt-0">
+    <li className="text-gray-700 text-base md:text-base font-normal md:max-w-3xl pt-0.5 md:pt-0">
       {children}
     </li>
   ),
@@ -30,17 +30,17 @@ const List = (props) => {
   return (
     <ul className={cn("flex gap-3 md:gap-4", props.className)}>
       {props?.items?.map((item, index) => (
-        <li key={index}>
+        <li key={index} className='text-base'>
           <div className="flex flex-row items-start gap-[6px]">
             <Image
               className="mt-[3.75px] w-5 h-5"
-              src="/good-tick.svg"
+              src="/Tick.svg"
               width={14}
               height={14}
               alt="points"
             />
             {!props?.isRichText ? (
-              <Paragraph className="pt-0.5 md:pt-0">{item}</Paragraph>
+              <p className="pt-0.5 md:pt-0 text-base text-gray-700">{item}</p>
             ) : (
               <PortableText key={index} value={item} components={components} />
             )}

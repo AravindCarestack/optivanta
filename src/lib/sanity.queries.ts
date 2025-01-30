@@ -144,22 +144,6 @@ export const heroSection = groq`
       "AuthorImage": authorimage.asset->url
     }
   },
-  "partner": {
-    selectedPartner[]->{
-      partnerName,
-      "image": partnerLogo.asset->{
-        _id,
-        url,
-        metadata {
-          dimensions {
-            width,
-            height,
-            aspectRatio
-          }
-        }
-      }
-    }
-  },
   "benifits": {
     selectedBenefits[]->{
       "benefitHeading":benefitHeading,
@@ -195,23 +179,6 @@ export const benifitQuery = groq` *[_type == "benefit"]{
      },
 'benefitPoints':benefitPoints
     
-}`
-export const getFounderDetails = () => groq`*[_type == "person"]{
-  'name':personName,
-  'socialMediaLinks':socialMediaLinks,
-  'image': personImage.asset->{
-       _id,
-       url,
-       metadata {
-         dimensions {
-           width,
-           height,
-           aspectRatio
-         }
-       }
-     },
-    'designation':personDesignation,
-    'description':personDescription
 }`
 
 export const SeoQuery = groq`*[_type == "siteSettings"]
@@ -336,7 +303,7 @@ export const getALLHomeSettings = () => groq`*[_type == "homeSettings"]{
     },
   "selectedTestimonials": selectedTestimonial[]->{
       ...,
-      "AuthorImage": authorimage.asset->url
+      "icon": membershipIcon.asset->url
     },
   "selectedPartners": selectedPartner[]->{
       partnerName,
@@ -367,7 +334,7 @@ export const getALLHomeSettings = () => groq`*[_type == "homeSettings"]{
       },
       "benefitPoints": benefitPoints
     }
-} | order(_createdAt desc)[0]`
+}[0]`
 
 export const getALLSiteSettings = () =>
   groq`*[_type == "siteSettings"] | order(_createdAt desc)[0]`
@@ -408,19 +375,6 @@ export const getAllComparisonValues = () =>
       }
   }`
 
-export const getAllPMS = () =>
-  groq`*[_type == "allPMS"]{...,"image": pmsImage.asset -> {
-      _id,
-      url,
-      metadata {
-        dimensions {
-          width,
-          height,
-          aspectRatio
-        }
-      }
-    }  
-  }`
 
 /*####################################### INTERFACES    ###########################*/
 export interface Post {
