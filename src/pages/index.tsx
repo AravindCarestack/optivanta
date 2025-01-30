@@ -3,12 +3,9 @@ import Content from '~/components/Content'
 import { readToken } from '~/lib/sanity.api'
 import {
   getALLHomeSettings,
-  getAllPMS,
   getALLSiteSettings,
   getComparisonTableData,
-  getFounderDetails,
   getAllComparisonValues,
-  fetchMembership,
   memberShipQuery
 } from '~/lib/sanity.queries'
 import type { SharedPageProps } from '~/pages/_app'
@@ -22,9 +19,7 @@ export const getStaticProps: GetStaticProps<SharedPageProps> = async ({
 }) => {
   const homeSettings = await runQuery(getALLHomeSettings())
   const siteSettings = await runQuery(getALLSiteSettings())
-  const founderDetails = await runQuery(getFounderDetails())
   const comparisonTableData = await runQuery(getComparisonTableData())
-  const allPMS = await runQuery(getAllPMS())
   const comparisonLegend = await runQuery(getAllComparisonValues())
   const memberShip = await runQuery(memberShipQuery)
   
@@ -32,9 +27,7 @@ export const getStaticProps: GetStaticProps<SharedPageProps> = async ({
     props: {
       homeSettings,
       siteSettings,
-      founderDetails,
       comparisonTableData,
-      allPMS,
       draftMode,
       comparisonLegend,
       token: draftMode ? readToken : '',

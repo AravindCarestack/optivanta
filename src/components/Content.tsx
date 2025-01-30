@@ -14,9 +14,7 @@ const Content = (props: any) => {
     siteSettings,
     founderDetails,
     comparisonTableData,
-    allPMS,
     comparisonLegend,
-    memberShip,
   } = props
 
   if (!homeSettings && !siteSettings) return <></>
@@ -43,13 +41,6 @@ const Content = (props: any) => {
     cta,
   }
 
-  const integrationsSectionData = {
-    strip: 'Integrations',
-    header: homeSettings.integrationHeader,
-    integrations: homeSettings.selectedIntegrations,
-    pms: allPMS,
-    cta,
-  }
 
   const benefitSectionData = {
     strip: 'BENEFITS',

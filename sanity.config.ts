@@ -76,11 +76,10 @@ export default defineConfig({
         'featureCategory',
         'integration',
         'testimonial',
-        'person',
-        'legal',
-        'partner',
-        'comparisonValue',
-        'allPMS',
+        // 'person',
+        // 'legal',
+        // 'partner',
+        // 'comparisonValue',
       ],
       weakReferences: true,
       languageField: 'language',
@@ -127,24 +126,12 @@ export default defineConfig({
                   .schemaType('comparisonTable')
                   .documentId('comparisonTable'),
               ),
-            // S.listItem()
-            // .title('Legal Information')
-            // .child(
-            //   S.document()
-            //     .schemaType('legal')
-            //     .documentId('legal'),
-            // ),
-            // S.documentTypeListItem('homeSettings').title('homeSettings'),
             S.documentTypeListItem('testimonial').title('Testimonial'),
             S.documentTypeListItem('featureCategory').title('FeatureCategory'),
             S.documentTypeListItem('feature').title('Feature'),
             S.documentTypeListItem('integration').title('Integration'),
             S.documentTypeListItem('benefit').title('Benefit'),
-            S.documentTypeListItem('person').title('Person'),
-            S.documentTypeListItem('legal').title('Legal'),
-            S.documentTypeListItem('partner').title('Partner'),
-            S.documentTypeListItem('comparisonValue').title('Comparison Value'),
-            S.documentTypeListItem('allPMS').title('All PMS'),
+
           ]),
     }),
 

@@ -10,13 +10,8 @@ import Testimonials from './Testimonials'
 import Benefits from './Benefits'
 import HomeSettings from './HomeSettings'
 import multipleString from './multipleString'
-import Person from './Person'
-import legal from './Legal'
-import partner from './partner'
 import customBlockContent from './customBlockContent.js'
-import comparison from './Comparison'
-import comparisonValue from "./ComparisonValue"
-import PMS from './PMS'
+
 
 export const schemaTypes = [
   layout,
@@ -27,12 +22,6 @@ export const schemaTypes = [
   Testimonials,
   Benefits,
   HomeSettings,
-  Person,
-  legal,
-  partner,
-  comparison,
-  comparisonValue,
-  PMS
 ]
 
 export const schema: { types: SchemaTypeDefinition[] } = {
@@ -48,11 +37,5 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     Benefits,
     HomeSettings,
     multipleString,
-    Person,
-    legal,
-    partner,
-    comparison,
-    comparisonValue,
-    PMS
   ],
 }
