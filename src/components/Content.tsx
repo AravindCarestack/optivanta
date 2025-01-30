@@ -87,12 +87,10 @@ const Content = (props: any) => {
     <div className="flex flex-col">
       <Section
         id="hero-section"
-        className="hero-section bg-hero-gradient bg-cover"
+        className="relative hero-section bg-hero-gradient bg-cover"
       >
-        <Container className="relative pt-20 pb-24 md:pb-44 ">
-          <HeroSection data={heroSectionData} />
-        </Container>
         <GridPattern
+          key={Math.random()}
           width={40}
           height={40}
           x={-1}
@@ -100,9 +98,15 @@ const Content = (props: any) => {
           stroke="currentColor"
           className={cn(
             '[mask-image:linear-gradient(to_top_left,yellow,transparent,transparent)]',
+            'absolute inset-0 w-full h-full',
           )}
         />
+
+        <Container className="relative pt-20 pb-24 md:pb-44">
+          <HeroSection data={heroSectionData} />
+        </Container>
       </Section>
+
       <Section
         id="service-section"
         className="features-section pb-16 pt-16 md:pt-48 md:pb-24 z-10 !bg-gray-50"
@@ -121,12 +125,26 @@ const Content = (props: any) => {
       </Section>
       <Section
         id="membership-section"
-        className="py-16 md:py-24 bg-[#ffc72c] bg-grid-pattern bg-blend-color-burn bg-cover"
+        className="relative py-16 md:py-24 bg-[#FFC72C] text-[#694D00]  "
       >
-        <Container className="flex flex-col items-center gap-16">
+        <GridPattern
+          key={Math.random() + 98}
+          width={40}
+          height={40}
+          x={10}
+          y={10}
+          stroke="currentColor"
+          className={cn(
+            '[mask-image:linear-gradient(to_top_right,yellow,transparent,transparent)]',
+            'absolute inset-0 w-full h-full',
+          )}
+        />
+
+        <Container className="relative flex flex-col items-center gap-16">
           {membershipData && <TestimonialSection data={membershipData} />}
         </Container>
       </Section>
+
       <Section
         id="about-us-section"
         className="py-16 md:py-24 bg-contain bg-no-repeat bg-right"

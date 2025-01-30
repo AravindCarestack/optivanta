@@ -46,13 +46,13 @@ const TestimonialCarousel = ({ membershipData }) => {
     return card?.map((e, i) => {
       return (
         <div
-          className="w-[328px] h-[550px] bg-black-gradient rounded-xl"
+          className="w-[328px] h-[580px] bg-black-gradient rounded-xl"
           key={i}
         >
-          <div className="h-[126px] w-[328px] underline-offset-2 border-b border-gray-500 p-8 flex-col flex gap-6 pt-4 px-8 pb-8">
+          <div className="h-[155px] w-[328px] underline-offset-2 border-b border-gray-500 p-8 flex-col flex gap-6 pt-4 px-8 pb-8">
             <div className="flex flex-row justify-between">
-              <div className="border-yellow-500 w-6 h-6">
-                <Image src={e?.icon} alt={''} width={50} height={50} />
+              <div className="border-yellow-500">
+                <Image src={e?.icon} alt={''} width={56} height={56} />
               </div>
               <p className="text-yellow-600 text-base">
                 {!e?.isFutureFeature ? 'Coming Soon*' : ''}

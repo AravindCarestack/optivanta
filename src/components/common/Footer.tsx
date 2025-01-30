@@ -10,7 +10,11 @@ const TopSection = ({ data, ctaName }) => {
       <div className="w-full gap-8 inline-flex flex-col ">
         <H2 className="!text-white ">Lower Expenses. Maximize Efficiency.</H2>
         <div className="flex justify-center">
-          <CTAButton url={data} className="px-6 py-3 text-black bg-yellow-gradient" name={ctaName} />
+          <CTAButton
+            url={data}
+            className="px-6 py-3 text-black bg-yellow-gradient"
+            name={ctaName}
+          />
         </div>
       </div>
       <div className="self-stretch h-[0px] border border-white/20"></div>
@@ -20,30 +24,8 @@ const TopSection = ({ data, ctaName }) => {
 
 const BottomSection = () => {
   return (
-    <div className="w-full flex flex-col-reverse md:flex-row justify-center md:justify-between gap-6">
-      <div className="text-white/50 text-center">
-        © 2023 Optivanta. All Rights Reserved.
-      </div>
-      <div className="flex flex-col md:flex-row gap-4 md:gap-8 text-center">
-        <Link
-          className=" text-white/50 hover:text-white/90"
-          href={'/'}
-        >
-          Terms of use
-        </Link>
-        <Link
-          className=" text-white/50 hover:text-white/90"
-          href={'/'}
-        >
-          Privacy policy
-        </Link>
-        <Link
-          className=" text-white/50 hover:text-white/90"
-          href={'/'}
-        >
-          Contact Us
-        </Link>
-      </div>
+    <div className="w-full  text-white/50 text-center flex flex-col-reverse   md:justify-between">
+      © 2023 Optivanta. All Rights Reserved.
     </div>
   )
 }
