@@ -25,7 +25,7 @@ const components: any = {
   },
   listItem: {
     bullet: ({ children }: { children: React.ReactNode }) => (
-      <li className="text-gray-300 text-lg pb-4 font-normal leading-7 list-none flex gap-[6px]">
+      <li className="text-gray-300 pb-4 text-base font-normal leading-7 list-none flex gap-[6px]">
         <Image
           className="mt-[3.75px] w-5 h-5"
           src="/Tick.svg"
