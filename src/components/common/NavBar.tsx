@@ -49,7 +49,7 @@ export function MobileNavBar(props) {
         </a>
       ))}
       {/* <LoginButton url={props?.loginUrl} /> */}
-      <CTAButton url={props?.ctaUrl} name={props.ctaName} />
+      <CTAButton url={props?.ctaUrl} name={props.ctaName} className={'bg-yellow-gradient text-black'} />
     </div>
   )
 }
