@@ -17,8 +17,6 @@
 
 ## Required ENV variables
 
-Required Env variables
-
 #### SANITY_API_READ_TOKEN
 #### NEXT_PUBLIC_SANITY_DATASET=production
 #### SANITY_STUDIO_DATASET=production
