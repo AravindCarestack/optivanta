@@ -49,7 +49,7 @@ const Header = (props) => {
           <Link href="/" className="flex items-center space-x-2">
             <span className="font-bold text-lg">
               <Image
-                src="/Optivanta.svg"
+                src="/AceDSN.png"
                 width={135}
                 height={26}
                 alt="OSDental"
