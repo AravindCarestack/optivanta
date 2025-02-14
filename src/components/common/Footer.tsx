@@ -25,7 +25,7 @@ const TopSection = ({ data, ctaName }) => {
 const BottomSection = () => {
   return (
     <div className="w-full  text-white/50 text-center flex flex-col-reverse   md:justify-between">
-      © 2023 Optivanta. All Rights Reserved.
+      © 2025 AceDSN. All Rights Reserved.
     </div>
   )
 }
