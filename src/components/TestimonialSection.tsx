@@ -21,7 +21,7 @@ const TestimonialSection = ({ data }) => {
         <TestimonialCarousel membershipData={data.memberShip} />
       </div>
       <CTAButton
-        url={data.cta.url ?? '/'}
+        url={data.cta.url ?? ''}
         className="px-6 py-3 bg-black text-white"
         name={data.cta.name ?? ''}
       />
