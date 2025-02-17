@@ -42,7 +42,7 @@ const Header = (props) => {
   return (
     <header
       ref={headerRef}
-      className="fixed top-0 left-0 w-full py-4 backdrop-blur-sm  transition-colors duration-300 z-50 flex flex-col items-center "
+      className="fixed top-0 left-0 w-full py-4 backdrop-blur-sm z-[999] transition-colors duration-300  flex flex-col items-center "
     >
       <Container className="justify-between">
         <div className="flex flex-row  xl:px-0">

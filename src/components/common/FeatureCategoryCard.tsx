@@ -53,11 +53,11 @@ const FeatureCategoryCard = ({
             />
           </div>
         </div>
-        <div className="flex justify-center md:justify-start pt-10 md:pt-0">
+        <div className="">
           <CTAButton
             className="w-auto bg-black text-white px-6 py-3"
             name={cta.name ?? ''}
-            url={ '/'}
+            url={cta.url}
           />
         </div>
       </div>
