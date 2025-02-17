@@ -11,7 +11,7 @@ const CTAButton = ({ className = null, name, url }) => {
     >
       <a
         className=" font-medium"
-        href={url}
+        href={'https://share.hsforms.com/15ry1-xBdSdaA_yhY0sR-KQ2vkpl'}
         target="_blank"
         rel="noopener noreferrer"
       >
