@@ -31,7 +31,7 @@ const BenefitsSection = ({ data }) => {
       <CTAButton
         className="px-6 py-3 bg-yellow-gradient"
         name={data.cta.name ?? 'Become A Member'}
-        url={data.cta.url ?? '/'}
+        url={data.cta.url ?? ''}
       />
     </>
   )

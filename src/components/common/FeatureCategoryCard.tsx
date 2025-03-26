@@ -36,7 +36,7 @@ const FeatureCategoryCard = ({
     return () => observer.disconnect()
   }, [setActiveImage,setOpacity,image])
   return (
-    <div ref={contentRef} className="flex md:h-[64vh] w-full items-center">
+    <div ref={contentRef} className="flex md:h-[64vh] w-full items-center z-10">
       <div className="hidden md:block md:w-1/2 "></div>
       <div className="w-full  md:w-1/2 flex flex-col gap-8 md:pl-8 ">
         <div className="flex flex-col gap-12 ">
@@ -53,11 +53,11 @@ const FeatureCategoryCard = ({
             />
           </div>
         </div>
-        <div className="flex justify-center md:justify-start pt-10 md:pt-0">
+        <div className="">
           <CTAButton
             className="w-auto bg-black text-white px-6 py-3"
             name={cta.name ?? ''}
-            url={cta.url ?? '/'}
+            url={cta.url}
           />
         </div>
       </div>
