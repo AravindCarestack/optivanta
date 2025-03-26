@@ -36,7 +36,7 @@
     "react-slick": "^0.30.3",
     "sanity": "3.28.0",
     "sanity-plugin-iframe-pane": "2.6.1",
-    "sanity-plugin-media": "^2.4.2",
+    "sanity-plugin-media": "2.3.2",
     "slick-carousel": "^1.8.1",
     "styled-components": "6.1.8",
     "tailwind-merge": "^2.6.0",
